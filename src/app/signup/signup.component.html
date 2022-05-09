@@ -1,0 +1,116 @@
+<div class="counter">
+    <div class="counter_background" style="background-image:url(assets/images/counter_background.jpg)"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="counter_content">
+                    <h2 class="counter_title">Signup</h2>
+                    <div class="counter_text"><p>Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dumy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p></div>
+
+                    <!-- Milestones -->
+
+                    <div class="milestones d-flex flex-md-row flex-column align-items-center justify-content-between">
+                        
+                        <!-- Milestone -->
+                        <div class="milestone">
+                            <div class="milestone_counter" data-end-value="15">0</div>
+                            <div class="milestone_text">years</div>
+                        </div>
+
+                        <!-- Milestone -->
+                        <div class="milestone">
+                            <div class="milestone_counter" data-end-value="120" data-sign-after="k">0</div>
+                            <div class="milestone_text">years</div>
+                        </div>
+
+                        <!-- Milestone -->
+                        <div class="milestone">
+                            <div class="milestone_counter" data-end-value="670" data-sign-after="+">0</div>
+                            <div class="milestone_text">years</div>
+                        </div>
+
+                        <!-- Milestone -->
+                        <div class="milestone">
+                            <div class="milestone_counter" data-end-value="320">0</div>
+                            <div class="milestone_text">years</div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="counter_form">
+            <div class="row fill_height">
+                <div class="col fill_height">
+                    <form class="counter_form_content d-flex flex-column align-items-center justify-content-center"  [formGroup]="singupId">
+                        <div>Signup</div>
+                        <input formControlName="firstName" type="text" class="counter_input" placeholder="First name:">
+                        <div *ngIf="singupId.controls['firstName'].invalid &&
+                        (singupId.controls['firstName'].dirty || singupId.controls['firstName'].touched)">
+                        <div *ngIf ="singupId.controls['firstName'].errors.required" class="text-danger">
+                          First name is required
+         
+                        </div>
+                        <div *ngIf="singupId.controls['firstName'].errors.minlength" class="text-danger">
+                         First name must have at least 3 character
+                        </div>
+                          
+                       </div>
+
+
+                        <input formControlName="lastName" type="text" class="counter_input" placeholder="Last Name:">
+                        <div *ngIf="singupId.controls['lastName'].invalid &&
+                        (singupId.controls['lastName'].dirty || singupId.controls['lastName'].touched)">
+                        <div *ngIf ="singupId.controls['lastName'].errors.required" class="text-danger">
+                          Last name is required
+         
+                        </div>
+                        <div *ngIf="singupId.controls['lastName'].errors.minlength" class="text-danger">
+                         last name must have at least 4 character
+                        </div>
+                          
+                       </div>
+
+                        <input formControlName="email" type="email" class="counter_input" placeholder="email:">
+                        <div *ngIf="singupId.controls['email'].invalid &&
+                        (singupId.controls['email'].dirty || singupId.controls['email'].touched)">
+                        <div *ngIf ="singupId.controls['email'].errors.required" class="text-danger">
+                          Email is required
+         
+                        </div>
+                        <div *ngIf="singupId.controls['email'].errors.email" class="text-danger">
+                            Invalid email
+                           </div>
+                          
+                       </div>
+                        
+                        <input formControlName="cin" type="number" class="counter_input" placeholder=" CIN:">
+
+                        <div *ngIf="singupId.controls['cin'].invalid &&
+                        (singupId.controls['cin'].dirty || singupId.controls['cin'].touched)">
+                        <div *ngIf ="singupId.controls['cin'].errors.required" class="text-danger">
+                          Cin is required
+         
+                        </div>
+                        <div *ngIf="singupId.controls['cin'].errors.minlength" class="text-danger">
+                         Cin must have at least 8 character
+                        </div>
+                        <div *ngIf="singupId.controls['cin'].errors.maxlength" class="text-danger">
+                            Cin must have at most 8 character
+                           </div>
+                          
+                       </div>
+                        <input formControlName="pwd" type="password" class="counter_input" placeholder=" Password:">
+                       
+                       
+                        <button type="submit" class="counter_form_button" (click)="signup (singupId.value)" >Signup</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+

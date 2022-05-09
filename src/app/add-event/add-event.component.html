@@ -1,0 +1,105 @@
+<div class="counter">
+    <div class="counter_background" style="background-image:url(assets/images/counter_background.jpg)"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="counter_content">
+                    <h2 class="counter_title">Signup</h2>
+                    <div class="counter_text"><p>Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dumy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p></div>
+
+                    <!-- Milestones -->
+
+                    <div class="milestones d-flex flex-md-row flex-column align-items-center justify-content-between">
+                        
+                        <!-- Milestone -->
+                        <div class="milestone">
+                            <div class="milestone_counter" data-end-value="15">0</div>
+                            <div class="milestone_text">years</div>
+                        </div>
+
+                        <!-- Milestone -->
+                        <div class="milestone">
+                            <div class="milestone_counter" data-end-value="120" data-sign-after="k">0</div>
+                            <div class="milestone_text">years</div>
+                        </div>
+
+                        <!-- Milestone -->
+                        <div class="milestone">
+                            <div class="milestone_counter" data-end-value="670" data-sign-after="+">0</div>
+                            <div class="milestone_text">years</div>
+                        </div>
+
+                        <!-- Milestone -->
+                        <div class="milestone">
+                            <div class="milestone_counter" data-end-value="320">0</div>
+                            <div class="milestone_text">years</div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="counter_form">
+            <div class="row fill_height">
+                <div class="col fill_height">
+                    <form class="counter_form_content d-flex flex-column align-items-center justify-content-center"  [formGroup]="eventId">
+                        <div>add event</div>
+                        <input formControlName="name" type="text" class="counter_input" placeholder="Name:">
+                        <div *ngIf="eventId.controls['name'].invalid &&
+                        (eventId.controls['name'].dirty || eventId.controls['name'].touched)">
+                        <div *ngIf ="eventId.controls['name'].errors.required" class="text-danger">
+                          name is required
+         
+                        </div>
+                        
+                          
+                       </div>
+
+
+                        <input formControlName="description" type="text" class="counter_input" placeholder="description:">
+                        <div *ngIf="eventId.controls['description'].invalid &&
+                        (eventId.controls['description'].dirty || eventId.controls['description'].touched)">
+                        <div *ngIf ="eventId.controls['description'].errors.required" class="text-danger">
+                          description is required
+         
+                        </div>
+                        
+                          
+                       </div>
+
+                        <input formControlName="date" type="date" class="counter_input" placeholder="date:">
+                        <div *ngIf="eventId.controls['date'].invalid &&
+                        (eventId.controls['date'].dirty || eventId.controls['date'].touched)">
+                        <div *ngIf ="eventId.controls['date'].errors.required" class="text-danger">
+                          date is required
+         
+                        </div>
+                        
+                          
+                       </div>
+                        
+                        <input formControlName="place" type="text" class="counter_input" placeholder=" place:">
+
+                        <div *ngIf="eventId.controls['place'].invalid &&
+                        (eventId.controls['place'].dirty || eventId.controls['place'].touched)">
+                        <div *ngIf ="eventId.controls['place'].errors.required" class="text-danger">
+                          place is required
+         
+                        </div>
+                        
+                          
+                       </div>
+                        
+                       
+                       
+                        <button type="submit" class="counter_form_button" (click)="add (eventId.value)" >Add</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+

@@ -12,6 +12,13 @@ import { EventComponent } from './event/event.component';
 import { BestTutorsComponent } from './best-tutors/best-tutors.component';
 import { NewsComponent } from './news/news.component';
 import { FooterComponent } from './footer/footer.component';
+import { SignupComponent } from './signup/signup.component';
+import { LoginComponent } from './login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CoursesComponent } from './courses/courses.component';
+import { EventsComponent } from './events/events.component';
+import { AddCourseComponent } from './add-course/add-course.component';
+import { AddEventComponent } from './add-event/add-event.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +31,19 @@ import { FooterComponent } from './footer/footer.component';
     EventComponent,
     BestTutorsComponent,
     NewsComponent,
-    FooterComponent
+    FooterComponent,
+    SignupComponent,
+    LoginComponent,
+    CoursesComponent,
+    EventsComponent,
+    AddCourseComponent,
+    AddEventComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

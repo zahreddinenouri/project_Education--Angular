@@ -1,0 +1,67 @@
+<div class="counter">
+    <div class="counter_background" style="background-image:url(assets/images/counter_background.jpg)"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="counter_content">
+                    <h2 class="counter_title">Login</h2>
+                    <div class="counter_text"><p>Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dumy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p></div>
+
+                    <!-- Milestones -->
+
+                    <div class="milestones d-flex flex-md-row flex-column align-items-center justify-content-between">
+                        
+                        <!-- Milestone -->
+                        <div class="milestone">
+                            <div class="milestone_counter" data-end-value="15">0</div>
+                            <div class="milestone_text">years</div>
+                        </div>
+
+                        <!-- Milestone -->
+                        <div class="milestone">
+                            <div class="milestone_counter" data-end-value="120" data-sign-after="k">0</div>
+                            <div class="milestone_text">years</div>
+                        </div>
+
+                        <!-- Milestone -->
+                        <div class="milestone">
+                            <div class="milestone_counter" data-end-value="670" data-sign-after="+">0</div>
+                            <div class="milestone_text">years</div>
+                        </div>
+
+                        <!-- Milestone -->
+                        <div class="milestone">
+                            <div class="milestone_counter" data-end-value="320">0</div>
+                            <div class="milestone_text">years</div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="counter_form">
+            <div class="row fill_height">
+                <div class="col fill_height">
+                    <form class="counter_form_content d-flex flex-column align-items-center justify-content-center" #loginId="ngForm" (ngSubmit)="login()">
+                        <div>Login</div>
+                        <input required #cin="ngModel" [(ngModel)]="user.cin" type="text" class="counter_input" placeholder="Your CIN:"  name="cin">
+                        <div *ngIf="loginId.submitted && cin.invalid" class="invalidfeedback">
+
+                            <div *ngIf="loginId.controls['cin'].errors.required" class="text-danger">CIN is required</div>
+                        </div>
+                        <input required #pwd="ngModel" [(ngModel)]="user.password" type="password" class="counter_input" placeholder="Your Password:"  name="pwd">
+                        <div *ngIf="loginId.submitted && pwd.invalid" class="invalidfeedback">
+
+                            <div *ngIf="loginId.controls['pwd'].errors.required" class="text-danger">password is required</div>
+                        </div>
+                       
+                        <button type="submit" class="counter_form_button">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
