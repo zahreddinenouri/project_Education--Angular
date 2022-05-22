@@ -1,0 +1,39 @@
+<form class="form-inline my-2 my-lg-0">
+  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search Name</button>
+</form>
+<form class="form-inline my-2 my-lg-0">
+  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search price</button>
+</form>
+<table class="table">
+    
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">nameCours</th>
+        <th scope="col">nameProf</th>
+        <th scope="col">price</th>
+        
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of coursesTab">
+        <th scope="row" >{{c.id}}</th>
+        
+        <td>{{c.nameCours}}</td>
+        <td>{{c.nameProf}}</td>
+        <td>{{c.price}}</td>
+     
+      
+        <td><button (click)="displayCours(c.id)">display</button></td>
+        <td><button>delete</button></td>
+        <td><button>edit</button></td>
+      </tr>
+      
+      
+     
+    </tbody>
+  </table>
+

@@ -1,0 +1,30 @@
+
+<table class="table">
+    
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">name</th>
+        <th scope="col">lastName</th>
+        <th scope="col">action</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor ='let i of tutors'>
+        <th scope="row">{{i.id}}</th>
+        <td>{{i.name}}</td>
+        <td>{{i.lastName}}</td>
+        
+     
+      
+        <td><button (click)="displayTeacher(i.id)">display</button></td>
+        <td><button>delete</button></td>
+        <td><button>edit</button></td>
+      </tr>
+      
+      
+     
+    </tbody>
+  </table>
+

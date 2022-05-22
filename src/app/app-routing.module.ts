@@ -1,13 +1,19 @@
 import {  NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AddCourseComponent } from './add-course/add-course.component';
-import { AddEventComponent } from './add-event/add-event.component';
-import { CoursComponent } from './cours/cours.component';
-import { CoursesComponent } from './courses/courses.component';
-import { EventComponent } from './event/event.component';
-import { EventsComponent } from './events/events.component';
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
+import { AddCourseComponent } from './component/add-course/add-course.component';
+import { AddEventComponent } from './component/add-event/add-event.component';
+import { AdminComponent } from './component/admin/admin.component';
+import { CoursInfoComponent } from './component/cours-info/cours-info.component';
+import { CoursComponent } from './component/cours/cours.component';
+import { CoursesComponent } from './component/courses/courses.component';
+import { EventComponent } from './component/event/event.component';
+import { EventsComponent } from './component/events/events.component';
+import { HomeComponent } from './component/home/home.component';
+import { LoginComponent } from './component/login/login.component';
+import { SignupComponent } from './component/signup/signup.component';
+import { TeacherInfoComponent } from './component/teacher-info/teacher-info.component';
+import { TeacherComponent } from './component/teacher/teacher.component';
+import { TutorsComponent } from './component/tutors/tutors.component';
 
 
 const routes: Routes = [
@@ -18,7 +24,13 @@ const routes: Routes = [
   {path:'event',component:EventComponent},
   {path:'events',component:EventsComponent},
   {path:'addCoures',component:AddCourseComponent},
-  {path:'addEvent',component:AddEventComponent}
+  {path:'addEvent',component:AddEventComponent},
+  {path:'admin',component:AdminComponent},
+  {path:"",component:HomeComponent},
+  {path:'tutors',component:TutorsComponent},
+  {path:'teacher',component:TeacherComponent},
+  {path:'teacherInfo/:id',component:TeacherInfoComponent},
+  {path:'coursInfo/:id',component:CoursInfoComponent},
 ];
 
 @NgModule({
